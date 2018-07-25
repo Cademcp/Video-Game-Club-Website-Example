@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Video Game Club - Join</title>
+ <script language="JavaScript" src="../js/formLib.js"></script>
+ <script src = "DateTime.js"></script>
+<script>
+<!--
+  function validateForm ( form ) {
+
+	  requiredText = new Array( "name", "email");
+
+	  requiredSelect = new Array( "play_frequency", "game_types"  );
+	  requiredRadio  = new Array( "game_system" );
+
+	  return requireValues ( form, requiredText   ) &&
+			 requireSelects( form, requiredSelect ) &&
+			 requireRadios ( form, requiredRadio  ) &&
+			 checkProblems ();
+  }
+// -->
+</script>
+<style type="text/css">
+</style>
+<link href="../css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<header class="header">Become A Member</header>
+<nav class="nav_bar">
+  <ul>
+	<li><a href="index.html"> Home</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="about.html">About</a><br>
+    </li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="schedule.html">Schedule </a></li>
+	<li><a href="Games.html">Games</a></li> 
+	<li><a class="active" href="become_member.html">Join</a></li>
+	<li><a href="wine.php">Winery</a></li>
+  </ul>
+</nav>
+
+<body>
+	<p>Fill out this form to become a member of the video game club!</p>
+	
+	<form class="form" method = "POST" action = "http://cs99.bradley.edu/~cmcpartlin/cgi-bin/member_echo.cgi" onSubmit="return validateForm( this );">
+		<p><label>Name:
+			<input name = "name" type = "text" size = "25" value = "">
+	  </label></p>
+		
+		<p><label>E-mail Address: 
+			<input name = "email" type = "text" size = "25" value = "">
+			</label></p>
+		
+		<strong>Please select the types of games you are interested in:</strong><br>
+		<label>RPG
+	  <input name = "game_types" type = "checkbox"
+				value = "RPG" checked></label><br>
+		<label>FPS
+			<input name = "game_types" type = "checkbox"
+				value = "FPS"></label><br>
+		<label>Battle Royale
+			<input name = "game_types" type = "checkbox"
+				value = "Battle Royale"></label><br>
+		<label>Adventure
+			<input name = "game_types" type = "checkbox"
+				value = "Adventure"></label><br>
+		<label>Strategy
+			<input name = "game_types" type = "checkbox"
+				value = "Strategy"></label><br>
+		<label>Sports
+			<input name = "game_types" type = "checkbox"
+				value = "Sports"></label><br>
+		
+		<br><strong>What gaming system are you most familiar with?</strong><br>
+		<label>PS4
+			<input name = "game_system" type = "radio"
+				value = "PS4"></label><br>
+		<label>Xbox One
+			<input name = "game_system" type = "radio"
+				value = "Xbox One"></label><br>
+		<label>PC
+			<input name = "game_system" type = "radio"
+				value = "PC"></label><br>
+		<label>Other
+			<input name = "game_system" type = "radio"
+				value = "Other"></label>
+	  <p>
+		
+		 <label>How often do you play video games?
+			  <select name ="play_frequency">
+				  	<option value="">Please Select a Frequency</option>
+					<option >Every Day</option>
+					<option >3x week</option>
+					<option >1x week</option>
+					<option >1x month</option>
+					<option >Once in a while</option>
+					<option >Never</option>
+				  	
+				</select>
+			</label><br> 
+		  
+		<br><strong>Select favorite game from this list:</strong>
+		<br><select name="fave_game" size="4" multiple="">
+		  <option>COD</option>
+		  <option selected="selected">Fortnite BR</option>
+		  <option>Rocket League</option>
+		  <option>CS:GO</option>
+		  <option>PUBG</option>
+		  <option>Other</option>
+		</select><br>
+		
+			
+		</p>
+		
+		<p><label>Interests:<br>
+			<textarea name = "interests"
+				rows = "4" cols = "36">Enter interests here.</textarea>
+			</label></p>
+		
+		<p>
+			<input type = "submit" value = "Submit">
+			<input type = "reset" value = "Clear">
+		</p>
+	</form>
+</body>
+
+<footer class="foot">
+  <p>Created By: Cade McPartlin and Brahim Gacimi</p>
+  <p>Contact information: <a href="mailto:someone@example.com">videogameclub@support.vgc.com</a>.</p>
+  <section id = "strings"></section>
+</footer>
+</html>

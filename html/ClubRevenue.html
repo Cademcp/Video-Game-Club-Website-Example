@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://hilltop.bradley.edu/~jiangbo/interest.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <title>Club Revenue</title>
+      <style type="text/css">
+         table         { width: 300px;
+                         border-collapse:collapse; 
+                         background-color: darkseagreen; }
+         table, td, th { border: 1px solid black; 
+                         padding: 4px; }
+         th            { text-align: left; 
+                         color: white;
+                         background-color: darkgreen; }
+         tr.oddrow     { background-color: white; }
+		  tr.end 	   { background-color: mediumpurple; }
+      </style>
+      <script>
+
+         var amount; // current amount of money
+         var principal = 100.00; // principal amount
+         var rate = 0.20; // interest rate
+		 var total = 0;
+
+         document.writeln( "<table>" ); // begin the table
+         document.writeln( 
+            "<h3>Club Donations by Year</h3>" );
+         document.writeln( 
+            "<thead><tr><th>Year</th>" ); // year column heading
+         document.writeln(
+            "<th>Revenue</th>" ); // amount column heading
+         document.writeln( "</tr></thead><tbody>" );
+
+         // output a table row for each year
+         for ( var year = 1; year <= 10; ++year )
+         {
+            amount = principal * Math.pow( 1.0 + rate, year );
+			total = total + amount;
+
+            if ( year % 2 !== 0 )
+               document.writeln( "<tr class='oddrow'><td>" + year + 
+                  "</td><td>" + amount.toFixed(2) + "</td></tr>" );
+            else
+               document.writeln( "<tr><td>" + year + 
+                  "</td><td>" + amount.toFixed(2) + "</td></tr>" );
+         } //end for
+
+		  document.writeln( "<tr class='end'> <td>" + "Total:" + 
+                  "</td><td>" + total.toFixed(2) + "</td></tr>" );
+         document.writeln( "</tbody></table>" );
+
+      </script>
+	
+   <br><br><a href="news.html">Click here to return to our news</a>
+
+
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+--> </head>
+
+
+
+</html>
